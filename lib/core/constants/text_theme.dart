@@ -1,7 +1,7 @@
-import 'package:app_template_setup/core/constants/colors.dart';
+import 'package:app_template_setup/core/constants/colors_constant.dart';
 import 'package:flutter/material.dart';
 
-import 'fontsize.dart';
+import 'font_size_constant.dart';
 
 // fontSize = 11;
 TextStyle textStyleOverLine({bool isUseSecondColor = false, bool isUseSoftColor = false, bool isUseTextBold = false, Color? color}) {
@@ -15,7 +15,7 @@ TextStyle textStyleOverLine({bool isUseSecondColor = false, bool isUseSoftColor 
 // fontSize = 13;
 TextStyle textStyleSmall({bool isUseSecondColor = false, bool isUseSoftColor = false, bool isUseTextBold = false, Color? color}) {
   return TextStyle(
-    fontSize: fontSizeSmall,
+    fontSize: FontSizeConstant.fontSizeSmall,
     color: color ?? textColor(isUseSecondColor: isUseSecondColor, isUseSoftColor: isUseSoftColor),
     fontWeight: isUseTextBold ? FontWeight.bold : FontWeight.normal,
   );
@@ -24,7 +24,7 @@ TextStyle textStyleSmall({bool isUseSecondColor = false, bool isUseSoftColor = f
 // fontSize = 15;
 TextStyle textStyleNormal({bool isUseSecondColor = false, bool isUseSoftColor = false, bool isUseTextBold = false, Color? color}) {
   return TextStyle(
-    fontSize: fontSizeNormal,
+    fontSize: FontSizeConstant.fontSizeNormal,
     color: color ?? textColor(isUseSecondColor: isUseSecondColor, isUseSoftColor: isUseSoftColor),
     fontWeight: isUseTextBold ? FontWeight.bold : FontWeight.normal,
   );
@@ -33,7 +33,7 @@ TextStyle textStyleNormal({bool isUseSecondColor = false, bool isUseSoftColor = 
 // fontSize = 17;
 TextStyle textStyleMedium({bool isUseSecondColor = false, bool isUseSoftColor = false, bool isUseTextBold = false, Color? color}) {
   return TextStyle(
-    fontSize: fontSizeTitle,
+    fontSize: FontSizeConstant.fontSizeTitle,
     color: color ?? textColor(isUseSecondColor: isUseSecondColor, isUseSoftColor: isUseSoftColor),
     fontWeight: isUseTextBold ? FontWeight.bold : FontWeight.normal,
   );
@@ -42,7 +42,7 @@ TextStyle textStyleMedium({bool isUseSecondColor = false, bool isUseSoftColor = 
 // fontSize = 19;
 TextStyle textStyleLarge({bool isUseSecondColor = false, bool isUseSoftColor = false, bool isUseTextBold = false, Color? color}) {
   return TextStyle(
-    fontSize: fontSizeLarge,
+    fontSize: FontSizeConstant.fontSizeLarge,
     color: color ?? textColor(isUseSecondColor: isUseSecondColor, isUseSoftColor: isUseSoftColor),
     fontWeight: isUseTextBold ? FontWeight.bold : FontWeight.normal,
   );
@@ -51,7 +51,7 @@ TextStyle textStyleLarge({bool isUseSecondColor = false, bool isUseSoftColor = f
 // fontSize = 21;
 TextStyle textStyleXLarge({bool isUseSecondColor = false, bool isUseSoftColor = false, bool isUseTextBold = false, Color? color}) {
   return TextStyle(
-    fontSize: fontSizeXLarge,
+    fontSize: FontSizeConstant.fontSizeXLarge,
     color: color ?? textColor(isUseSecondColor: isUseSecondColor, isUseSoftColor: isUseSoftColor),
     fontWeight: isUseTextBold ? FontWeight.bold : FontWeight.normal,
   );
@@ -60,7 +60,7 @@ TextStyle textStyleXLarge({bool isUseSecondColor = false, bool isUseSoftColor = 
 // fontSize = 24;
 TextStyle textStyleHeaderSmall({bool isUseSecondColor = false, bool isUseSoftColor = false, bool isUseTextBold = false, Color? color}) {
   return TextStyle(
-    fontSize: fontSizeHeaderSmall,
+    fontSize: FontSizeConstant.fontSizeHeaderSmall,
     color: color ?? textColor(isUseSecondColor: isUseSecondColor, isUseSoftColor: isUseSoftColor),
     fontWeight: isUseTextBold ? FontWeight.bold : FontWeight.normal,
   );
@@ -69,7 +69,7 @@ TextStyle textStyleHeaderSmall({bool isUseSecondColor = false, bool isUseSoftCol
 // fontSize = 26;
 TextStyle textStyleHeaderNormal({bool isUseSecondColor = false, bool isUseSoftColor = false, bool isUseTextBold = false, Color? color}) {
   return TextStyle(
-    fontSize: fontSizeHeaderNormal,
+    fontSize: FontSizeConstant.fontSizeHeaderNormal,
     color: color ?? textColor(isUseSecondColor: isUseSecondColor, isUseSoftColor: isUseSoftColor),
     fontWeight: isUseTextBold ? FontWeight.bold : FontWeight.normal,
   );
@@ -78,7 +78,7 @@ TextStyle textStyleHeaderNormal({bool isUseSecondColor = false, bool isUseSoftCo
 // fontSize = 28;
 TextStyle textStyleHeaderMedium({bool isUseSecondColor = false, bool isUseSoftColor = false, bool isUseTextBold = false, Color? color}) {
   return TextStyle(
-    fontSize: fontSizeHeaderMedium,
+    fontSize: FontSizeConstant.fontSizeHeaderMedium,
     color: color ?? textColor(isUseSecondColor: isUseSecondColor, isUseSoftColor: isUseSoftColor),
     fontWeight: isUseTextBold ? FontWeight.bold : FontWeight.normal,
   );
@@ -87,7 +87,7 @@ TextStyle textStyleHeaderMedium({bool isUseSecondColor = false, bool isUseSoftCo
 // fontSize = 30;
 TextStyle textStyleHeaderLarge({bool isUseSecondColor = false, bool isUseSoftColor = false, bool isUseTextBold = false, Color? color}) {
   return TextStyle(
-    fontSize: fontSizeHeaderLarge,
+    fontSize: FontSizeConstant.fontSizeHeaderLarge,
     color: color ?? textColor(isUseSecondColor: isUseSecondColor, isUseSoftColor: isUseSoftColor),
     fontWeight: isUseTextBold ? FontWeight.bold : FontWeight.normal,
   );
@@ -96,8 +96,8 @@ TextStyle textStyleHeaderLarge({bool isUseSecondColor = false, bool isUseSoftCol
 // CONDITION GET COLOR
 Color? textColor({bool isUseSecondColor = false, bool isUseSoftColor = false}) {
   if (isUseSecondColor) {
-    return isUseSoftColor ? textSoftColorSecondary : textColorSecondary;
+    return isUseSoftColor ? ColorConstant.textSoftColorSecondary : ColorConstant.textColorSecondary;
   } else {
-    return isUseSoftColor ? textSoftColorPrimary : textColorPrimary;
+    return isUseSoftColor ? ColorConstant.textSoftColorPrimary : ColorConstant.textColorPrimary;
   }
 }

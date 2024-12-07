@@ -1,0 +1,49 @@
+{
+
+  "Scafford": {
+    "prefix": "scff",
+    "body": [
+      "import 'package:auto_size_text/auto_size_text.dart';",
+      "import 'package:flutter/material.dart';",
+      "",
+      "class $1 extends StatelessWidget {",
+      "  const $1({super.key});",
+      "  static const route = '/$1';",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return Scaffold(",
+      "        appBar: AppBar(title: const AutoSizeText('')),",
+      "        body: null,",
+      "      );",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "scff"
+  },
+
+  "Logger": {
+    "prefix": "lg",
+    "body": ["Logger().d('$1 :: ${$1}');"],
+    "description": "Logger"
+  },
+
+  "fromToJson": {
+    "prefix": "fromToJson",
+    "body": ["factory $1.fromJson(Map<String, dynamic> json) => _$$1FromJson(json);", "Map<String, dynamic> toJson() => _$$1ToJson(this);"],
+    "description": "fromToJson"
+  },
+
+  "Context Selector": {
+    "prefix": "ctxSelector",
+    "body": ["final data = context.select<$1, $2>((value) => $3);"],
+    "description": "Context Selector"
+  },
+  
+  "Context Read": {
+    "prefix": "ctxRead",
+    "body": ["final data = context.read<$1>().$2;"],
+    "description": "Context Read"
+  }
+}
