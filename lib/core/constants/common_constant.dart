@@ -3,10 +3,6 @@ import 'dart:ui';
 class CommonConstant {
   static const nameFileEnvDevelopment = '.env.development';
   static const nameFileEnvProduction = '.env.production';
-  static const List<String> supportedCurrencies = ['LAK', 'USD', 'THB', 'CNY'];
-  static const List<String> supportedLanguages = ['lo', 'en', 'zh', 'vi'];
-  static const String defaultDeviceLanguage = 'lo';
-  static const String defaultCcy = 'LAK';
 
 // NETWORK
   static const int receiveTimeOut = 90; // Second
