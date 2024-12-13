@@ -1,10 +1,16 @@
 import 'package:app_template_setup/core/constants/colors_constant.dart';
 import 'package:app_template_setup/core/constants/font_size_constant.dart';
+import 'package:app_template_setup/setup/get_it_setup.dart';
 import 'package:app_template_setup/setup/theme_data.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // await dotenv.load(fileName: EnvSetUp.fileName);
+  await GetItSetUp.initializeGetIt();
+
   runApp(const MyApp());
 }
 
