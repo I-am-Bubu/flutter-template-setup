@@ -1,3 +1,4 @@
+import 'package:app_template_setup/core/constants/key_constant.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class SecureStorageHelper {
@@ -18,5 +19,9 @@ class SecureStorageHelper {
 
   Future<void> deleteAllSecureStorage() async {
     return await secureStorage.deleteAll();
+  }
+
+  Future<String?> getAuthToken() async {
+    return await secureStorage.read(key: KeyConstant.keyAuthToken);
   }
 }

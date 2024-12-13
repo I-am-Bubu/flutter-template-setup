@@ -17,7 +17,23 @@ Dio dioInterceptor(SecureStorageHelper secureStorage, NavigationHelper navigatio
   );
 
   dio.interceptors.addAll({
-    InterceptorsWrapper(),
+    InterceptorsWrapper(
+      onRequest: (RequestOptions options, RequestInterceptorHandler handler) async {
+        final token = await secureStorage.getAuthToken();
+        options.headers = {
+          ...options.headers,
+          'Authorization': 'Bearer $token',
+        };
+
+        return handler.next(options);
+      },
+      onResponse: (Response response, ResponseInterceptorHandler handler) async {
+        if (response.data == null) return handler.next(response);
+      },
+      onError: (DioException error, ErrorInterceptorHandler handler) {
+        return handler.next(error);
+      },
+    ),
     if (!kReleaseMode) CustomLogInterceptor(requestBody: true, responseBody: true),
   });
 
