@@ -24,4 +24,12 @@ class SecureStorageHelper {
   Future<String?> getAuthToken() async {
     return await secureStorage.read(key: KeyConstant.keyAuthToken);
   }
+
+  Future<void> saveAuthToken(String token) async {
+    await secureStorage.write(key: KeyConstant.keyAuthToken, value: token);
+  }
+
+  Future<void> saveRefreshToken(String token) async {
+    await secureStorage.write(key: KeyConstant.keyRefreshToken, value: token);
+  }
 }

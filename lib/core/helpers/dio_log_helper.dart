@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:app_template_setup/core/utils/extention_utils.dart';
 import 'package:dio/dio.dart';
+import 'package:logger/web.dart';
 
 /// [CustomLogInterceptor] is used to print logs during network requests.
 /// It's better to add [CustomLogInterceptor] to the tail of the interceptor queue,
@@ -123,7 +124,7 @@ class CustomLogInterceptor extends Interceptor {
 
 void _debugPrint(Object? object) {
   assert(() {
-    print(object);
+    Logger().d(object);
     return true;
   }());
 }

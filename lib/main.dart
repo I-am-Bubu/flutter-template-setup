@@ -10,8 +10,9 @@ void main() async {
 
   // await dotenv.load(fileName: EnvSetUp.fileName);
   await GetItSetUp.initializeGetIt();
-
   runApp(const MyApp());
+
+  // runApp(MultiProvider(providers: setUpProvider, child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
           body: const Center(
             child: Text(
               'ສະບາຍດີ',
-              style: TextStyle(color: ColorConstant.textThemeColor, fontSize: FontSizeConstant.fontSizeXLarge),
+              style: TextStyle(color: ColorConstant.textColorPrimary, fontSize: FontSizeConstant.fontSizeXLarge),
             ),
           ),
         ));
